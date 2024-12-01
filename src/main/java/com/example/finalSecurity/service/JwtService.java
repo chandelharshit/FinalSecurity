@@ -35,6 +35,10 @@ public class JwtService {
         final Claims claims= extractAllClaims(token);
         return claimsTResolver.apply(claims);
     }
+//    private <T> T extractClaims(String token, Function<Claims,T> claimsTResolver){
+//        final Claims claims= extractAllClaims(token);
+//        return claimsTResolver.apply(claims);
+//    }
 
     private Claims extractAllClaims(String token) {
         return Jwts.parserBuilder()
